@@ -651,7 +651,7 @@ minetest.register_node("animalia:crate", {
 -- Crafting --
 --------------
 
-local steel_ingot = "default:steel_ingot"
+local steel_ingot = "blocks:steel_ingot"
 
 minetest.register_on_mods_loaded(function()
 	if minetest.registered_items[steel_ingot] then return end
@@ -668,8 +668,8 @@ end)
 minetest.register_craft({
 	output = "animalia:cat_toy",
 	recipe = {
-		{"", "", "group:thread"},
-		{"", "group:stick", "group:thread"},
+		{"", "", "group:wool"},
+		{"", "group:stick", "group:wool"},
 		{"group:stick", "", "group:feather"}
 	}
 })
@@ -677,8 +677,8 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalia:cat_toy",
 	recipe = {
-		{"", "", "farming:string"},
-		{"", "group:stick", "farming:string"},
+		{"", "", "blocks:rope"},
+		{"", "group:stick", "blocks:rope"},
 		{"group:stick", "", "group:feather"}
 	}
 })
@@ -686,36 +686,36 @@ minetest.register_craft({
 minetest.register_craft({
 	output = "animalia:lasso",
 	recipe = {
-		{"", "group:thread", "group:thread"},
-		{"", "group:leather", "group:thread"},
-		{"group:thread", "", ""}
+		{"", "group:wool", "group:wool"},
+		{"", "group:leather", "group:wool"},
+		{"group:wool", "", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "animalia:lasso",
 	recipe = {
-		{"", "farming:string", "farming:string"},
-		{"", "group:leather", "farming:string"},
-		{"farming:string", "", ""}
+		{"", "blocks:rope", "blocks:rope"},
+		{"", "group:leather", "blocks:rope"},
+		{"blocks:rope", "", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "animalia:net",
 	recipe = {
-		{"group:thread", "", "group:thread"},
-		{"group:thread", "", "group:thread"},
-		{"group:stick", "group:thread", ""}
+		{"group:wool", "", "group:wool"},
+		{"group:wool", "", "group:wool"},
+		{"group:stick", "group:wool", ""}
 	}
 })
 
 minetest.register_craft({
 	output = "animalia:net",
 	recipe = {
-		{"farming:string", "", "farming:string"},
-		{"farming:string", "", "farming:string"},
-		{"group:stick", "farming:string", ""}
+		{"blocks:rope", "", "blocks:rope"},
+		{"blocks:rope", "", "blocks:rope"},
+		{"group:stick", "blocks:rope", ""}
 	}
 })
 
@@ -733,7 +733,7 @@ minetest.register_craft({
 	recipe = {
 		{"group:leather", "group:leather", "group:leather"},
 		{"group:leather", steel_ingot, "group:leather"},
-		{"group:thread", "", "group:thread"}
+		{"group:wool", "", "group:wool"}
 	}
 })
 
@@ -742,7 +742,7 @@ minetest.register_craft({
 	recipe = {
 		{"group:leather", "group:leather", "group:leather"},
 		{"group:leather", steel_ingot, "group:leather"},
-		{"farming:string", "", "farming:string"}
+		{"blocks:rope", "", "blocks:rope"}
 	}
 })
 
